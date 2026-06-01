@@ -4,6 +4,12 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^30.0.0"
-  }
+    "electron": "^30.5.1"
+  },
+  "name": "electron-js-demo",
+  "version": "1.0.0",
+  "description": "A cute desktop chat app built with **Electron.js**, HTML, CSS, and JavaScript.",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
