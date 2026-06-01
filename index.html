@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- Makes the layout behave nicely on different screen sizes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Bestie Chat</title>
+
+  <!-- Connect our CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main app container -->
+  <div class="app">
+
+    <!-- Optional sidebar section -->
+    <aside class="sidebar">
+      <h2>Bestie Chat 💬</h2>
+
+      <p class="sidebar-subtitle">Your desktop messaging station</p>
+
+      <div class="contact active">
+        <span class="avatar">A</span>
+        <div>
+          <h3>Amahle</h3>
+          <p>Online</p>
+        </div>
+      </div>
+
+      <div class="contact">
+        <span class="avatar">J</span>
+        <div>
+          <h3>Jayden</h3>
+          <p>Sent a meme 😂</p>
+        </div>
+      </div>
+
+      <div class="contact">
+        <span class="avatar">L</span>
+        <div>
+          <h3>Luna</h3>
+          <p>Typing...</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Chat area -->
+    <main class="chat-section">
+
+      <!-- Chat header -->
+      <header class="chat-header">
+        <div>
+          <h1>Amahle</h1>
+          <p>Typing...</p>
+        </div>
+
+        <span class="today-badge">Today</span>
+      </header>
+
+      <!-- Messages will appear here -->
+      <section class="messages" id="messages">
+        <div class="message received">
+          <p>Hey bestie 👋</p>
+        </div>
+
+        <div class="message received">
+          <p>Are you joining the coding session today?</p>
+        </div>
+
+        <div class="message sent">
+          <p>You: Obviously 😌 I’m ready to build apps!</p>
+        </div>
+      </section>
+
+      <!-- Message form -->
+      <form class="message-form" id="messageForm">
+        <input
+          type="text"
+          id="messageInput"
+          placeholder="Type the tea..."
+          autocomplete="off"
+        />
+
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </div>
+
+  <!-- Connect our JavaScript file -->
+  <script src="renderer.js"></script>
+</body>
+</html>

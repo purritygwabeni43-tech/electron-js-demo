@@ -1,0 +1,212 @@
+/* style.css */
+/* Basic reset to make spacing easier to control */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main page styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f7d9ff, #d8ecff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Desktop app container */
+.app {
+  width: 92%;
+  height: 88vh;
+  background-color: #ffffff;
+  border-radius: 24px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Sidebar section */
+.sidebar {
+  width: 260px;
+  background-color: #251539;
+  color: white;
+  padding: 24px;
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.sidebar-subtitle {
+  color: #d6c4f2;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+/* Contact cards */
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 16px;
+  margin-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.contact.active {
+  background-color: #7c3aed;
+}
+
+.contact h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.contact p {
+  font-size: 13px;
+  color: #e7ddff;
+}
+
+/* Small circular avatar */
+.avatar {
+  width: 38px;
+  height: 38px;
+  background-color: #f8c8ff;
+  color: #251539;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Chat section */
+.chat-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f7fc;
+}
+
+/* Chat header */
+.chat-header {
+  background-color: #ffffff;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e6e1f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header h1 {
+  font-size: 24px;
+  color: #251539;
+}
+
+.chat-header p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.today-badge {
+  background-color: #eee4ff;
+  color: #5b21b6;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Messages area */
+.messages {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Shared message bubble styling */
+.message {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* Received messages appear on the left */
+.received {
+  align-self: flex-start;
+  background-color: #ffffff;
+  color: #251539;
+  border-bottom-left-radius: 4px;
+}
+
+/* Sent messages appear on the right */
+.sent {
+  align-self: flex-end;
+  background-color: #7c3aed;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+/* Message form at the bottom */
+.message-form {
+  display: flex;
+  gap: 12px;
+  padding: 18px 24px;
+  background-color: #ffffff;
+  border-top: 1px solid #e6e1f2;
+}
+
+/* Input field */
+.message-form input {
+  flex: 1;
+  padding: 14px 16px;
+  border: 1px solid #d9d2e9;
+  border-radius: 999px;
+  font-size: 15px;
+  outline: none;
+}
+
+.message-form input:focus {
+  border-color: #7c3aed;
+}
+
+/* Send button */
+.message-form button {
+  border: none;
+  background-color: #7c3aed;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.message-form button:hover {
+  background-color: #5b21b6;
+}
+
+/* Small screen adjustment */
+@media (max-width: 750px) {
+  .sidebar {
+    display: none;
+  }
+
+  .app {
+    width: 96%;
+  }
+
+  .message {
+    max-width: 85%;
+  }
+}
